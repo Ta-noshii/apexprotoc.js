@@ -34,7 +34,7 @@ Server.once('connection', async () => {
     Server.send('CustomMatch_CreateLobby')
     await Server.once('response')
 
-    // May need to yeild for lobby to load depending on your PC
+    // May need to yield for lobby to load depending on your PC
 
     const LobbyPlayersData = await Server.get('CustomMatch_GetLobbyPlayers')
     console.log(`Lobby code is: ${LobbyPlayersData.playerToken}`)
